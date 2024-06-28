@@ -1,59 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feedback</title>
-    <style>
-        h1{
-            align-items: center;
-            text-align: center;
-            text-transform: uppercase;
-        }
-        .form1{
-            width: 100%;
-            align-items: center;
-            border: 2px blue;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback on Finance Bill 2024</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <h1>Reject Finance Bill 2024</h1>
+    <form action="feedback.php" method="post" id="usrform">
+      <fieldset class="feedback-form">
+        <legend>Leave Your Feedback</legend>
 
-        }
-        .form1{
-            align-items: center;
-        }
-        input{
-            margin: 10px;
-            padding: 2px 50px;
-            width: 70%;
-            box-sizing: border-box red ;
-        }
-        input:focus {
-  border: 3px solid #555;
-}
-    </style>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" name="name" id="name" required />
+        </div>
 
-</head>
-<body>
-    <h1>
-        Reject Finance Bill 2024
-    </h1>
-    <form action="" method="" id="usrform">
-        <div class="form1">
-        <label for="name ">Name:</label>
-        <input type="text" name="_name" id="name"><br>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" required />
+        </div>
 
-        <label for="email ">Email:</label>
-        <input type="email" name="email" id="email"><br>
+        <div class="form-group">
+          <label for="feedback">Feedback:</label>
+          <textarea name="feedback" id="feedback" rows="5" required></textarea>
+        </div>
 
-        <label for="number ">Rating:</label>
-        <input type="number" name="number" id="number"><br>
+        <div class="form-group">
+          <label for="rating">Rating (1-5):</label>
+          <input
+            type="number"
+            name="rating"
+            id="rating"
+            min="1"
+            max="5"
+            required
+          />
+        </div>
 
-        <label for="name ">Name:</label>
-        <input type="text" name="_name" id="name"><br>
-
-        <label for="name ">Name:</label>
-        <input type="text" name="_name" id="name"><br>
-    </div>
+        <div class="form-group">
+          <input
+            type="submit"
+            value="Submit Feedback"
+            class="submit-btn"
+            id="submitBtn"
+          />
+        </div>
+      </fieldset>
     </form>
-    <textarea name="feedback" form="usrform">Enter text here...</textarea>
-    
-</body>
+  </body>
 </html>
